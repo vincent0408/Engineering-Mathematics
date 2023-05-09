@@ -15,7 +15,11 @@ def problem_a():
     f = np.arange(N) / dx / N
     f = np.concatenate((f[-half:] - 1/ dx, f[:-half]))
     res = gdm * np.exp(1j * 2 * 1.98 * math.pi * f)
-    plt.figure(figsize=(20, 6)), plt.plot(f, res.real), plt.plot(f, res.imag), plt.show()    
+    plt.figure(figsize=(20, 6))
+    plt.plot(f, res.real, label='real')
+    plt.plot(f, res.imag, label='imag')
+    plt.legend()
+    plt.show()    
 
     
 def problem_d():
@@ -30,7 +34,11 @@ def problem_d():
     f = np.arange(N) / dx / N
     f = np.concatenate((f[-half:] - 1/ dx, f[:-half]))
     res = gdm * np.exp(1j * 2 * 2.95 * math.pi * f)
-    plt.figure(figsize=(20, 6)), plt.plot(f, res.real), plt.plot(f, res.imag), plt.show()    
+    plt.figure(figsize=(20, 6))
+    plt.plot(f, res.real, label='real')
+    plt.plot(f, res.imag, label='imag')
+    plt.legend()
+    plt.show()    
 
 problem_a()
 problem_d()
